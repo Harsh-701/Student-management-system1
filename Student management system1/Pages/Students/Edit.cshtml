@@ -1,0 +1,19 @@
+﻿@page
+@model Student_management_system1.Pages.Students.EditModel
+@{
+    
+}
+<h2>Edit Student</h2>
+<form method="post">
+    <input type="hidden" asp-for="Student.Id" />
+    Name:
+    <input asp-for="Student.Name" /><br />
+    Email:
+    <input asp-for="Student.Email" /><br />
+    Course:
+    <input asp-for="Student.Course" /><br />
+    Age:
+    <input asp-for="Student.Age" /><br />
+    <button type="submit"style="color:yellow">UPDATE</button>
+
+</form>

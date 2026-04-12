@@ -1,0 +1,31 @@
+﻿@page
+@model Student_management_system1.Pages.Students.StudentsIndexModel
+@{
+    
+
+}
+<marquee width="100%"behavior="alternate"><h2 style="color: Red">STUDENT LIST</h2></marquee>
+<a asp-page="Create">ADD NEW STUDENT</a>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Course</th>
+        <th>Age</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model.Students)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Course</td>
+            <td>@item.Age</td>
+            <td>
+                <a asp-page="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

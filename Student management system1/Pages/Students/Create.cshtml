@@ -1,0 +1,31 @@
+﻿@page
+@model Student_management_system1.Pages.Students.StudentsCreateModel
+@{
+    
+    
+}
+<h2>Add Create</h2>
+<form method="post">
+    <div>
+        <label>Name:</label>
+        <input asp-for="Student.Name" />
+    </div>
+
+    <div>
+    <label>Email</label>
+    <input asp-for="Student.Email" />
+    </div>
+
+    <div>
+        <label>Course</label>
+        <input asp-for="Student.Course" />
+    </div>
+
+    <div>
+        <label>Age:</label>
+        <input asp-for="Student.Age" />
+    </div>
+    <br />
+
+    <button type="submit" style="color:deepskyblue">SAVE RECORD</button>
+</form>

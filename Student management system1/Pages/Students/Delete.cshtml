@@ -1,0 +1,15 @@
+﻿@page
+@model Student_management_system1.Pages.Students.DeleteModel
+@{
+    
+}
+<h2>Delete Student</h2>
+<h3>Are you sure you want to delete?</h3>
+<div>
+    <strong>@Model.Student.Name</strong>
+</div>
+<form method="post">
+    <input type="hidden" asp-for="Student.Id" />
+    <button type="submit" style="color:red">DELETE </button>
+    <a asp-page="Index">Cancel</a>
+</form>
